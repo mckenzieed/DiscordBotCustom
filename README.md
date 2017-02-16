@@ -1,6 +1,14 @@
 # discord-guildrank-bot [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 > 
 
+## Version
+0.0.2
+
+First push on 02/14/2017. The bot works with the command !rank, that only gets the rank for the guild 'Months Behind' on US-Proudmoore. Functionality for all other guilds/realms/regions is underway.
+
+## Overview
+This is a [Discord](https://discordapp.com/) that will do a few things. The main thing it will do is fetch your guilds rank from wowprogress.com.
+
 ## Installation
 
 Clone this repository, and run:
@@ -13,6 +21,15 @@ $ npm install
 ```js
 $ npm run bot
 ```
+Type "!rank" without the quotes in discord after adding this bot as a user.
+
+List of commands:
+
+| Command Name  | Arguments | Usage |
+| ------------- | ------------| ----- | 
+| Rank          | Guildname, Realm, Region | Returns realm rank for specified guild. In order, Guildname is default 'Months Behind', Realm is 'Proudmoore' and Region is 'US' |
+| More to come  | | |
+
 ## License
 
 Apache-2.0 © [Ethan McKenzie]()

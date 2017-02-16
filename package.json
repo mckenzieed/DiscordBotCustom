@@ -1,6 +1,6 @@
 {
   "name": "discord-guildrank-bot",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "homepage": "",
   "author": {
@@ -40,7 +40,7 @@
       "mocha": true
     }
   },
-  "repository": "mckenzieed/discord-guildrank-bot",
+  "repository": "mckenzieed/DiscordBotCustom.git",
   "license": "Apache-2.0",
   "dependencies": {
     "clapp": "^1.2.1",

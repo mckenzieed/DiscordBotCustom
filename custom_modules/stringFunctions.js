@@ -17,23 +17,29 @@ var getSpecObjects = function (stringToParse) {
     while (stringToParse !== "") {
         var posOfSpec = stringToParse.indexOf("@") + 1;
         var posOfParse = stringToParse.indexOf("?") + 1;
+        var posOfDps = stringToParse.indexOf("<") + 1;
         var spec = stringToParse.substring(posOfSpec, posOfParse-1);
+        //var nextSpec = stringToParse.indexOf("@", posOfSpec);
+        //posOfSpec = stringToParse.indexOf("@", posOfSpec) + 1;
+        var parse = parse = stringToParse.substring(posOfParse, posOfDps-1);
         var nextSpec = stringToParse.indexOf("@", posOfSpec);
         posOfSpec = stringToParse.indexOf("@", posOfSpec) + 1;
-
-        var parse = "";
+        var dps = "";
         if (posOfSpec === 0) {
-            parse = stringToParse.substr(posOfParse);
+            dps = stringToParse.substr(posOfDps);
         } else {
-            parse = stringToParse.substring(posOfParse, posOfSpec-1);
+            dps = stringToParse.substring(posOfDps, posOfSpec - 1);
         }
 
-        var specObject = new SpecObject(spec, parse);
+        stringToParse = stringToParse.substr(posOfSpec-1);
+        if (spec === "Ranged") continue;
+
+        var specObject = new SpecObject(spec, parse, dps);
         specObjects.push(specObject);
 
         if (posOfSpec === 0) break;
 
-        stringToParse = stringToParse.substr(posOfSpec-1);
+        //stringToParse = stringToParse.substr(posOfSpec-1);
     }
 
     return specObjects;

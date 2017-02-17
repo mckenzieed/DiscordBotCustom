@@ -37,7 +37,7 @@ ParsesHelpers.prototype.getMostRecentBossParse = function (bossName, difficulty)
     var specs = bossParse.specs;
     
     specs.forEach(function(spec) {
-        var specObject = new SpecObject(spec.spec, spec.data[0].percent);
+        var specObject = new SpecObject(spec.spec, Math.round(spec.data[0].percent) + "%", spec.data[0].persecondamount.toLocaleString());
         parse.push(specObject);
     });
     return parse;

@@ -29,19 +29,17 @@ ParsesHelpers.prototype.getParsesOfBossInDifficulty = function (bossName, diffic
 }
 
 ParsesHelpers.prototype.getMostRecentBossParse = function (bossName, difficulty) {
+    var parse = [];
     var bossParse = this.getParsesOfBossInDifficulty(bossName, difficulty);
     if (!bossParse) {
-        return null;
+        return parse;
     }
     var specs = bossParse.specs;
-    var parse = [];
+    
     specs.forEach(function(spec) {
         var specObject = new SpecObject(spec.spec, spec.data[0].percent);
         parse.push(specObject);
     });
-    if (parse.length === 0) {
-        return null;
-    }
     return parse;
 }
 

@@ -12,11 +12,11 @@ module.exports = {
   // Your bot's user token. If you don't know what that is, go here:
   // https://discordapp.com/developers/applications/me
   // Then create a new application and grab your token.
-  token: "MjgwODMzOTg3NDU3NTgxMDU2.C4ih1g.5hnS8JKTeHKtTRpz2m6Zez_bUwg",
+  token: "MjgxNDQzMDE2NDM3Mzk5NTUy.C4YBvw.JOKZgcPMUqbNxOfz_s1OeUdibjM",
 
   // WarcraftLogs apikey
   wclToken: "b8f97aebad5c6f63f8088de2086e3674",
-
+  
   // If this option is enabled, the bot will delete the message that triggered it, and its own
   // response, after the specified amount of time has passed.
   // Enable this if you don't want your channel to be flooded with bot messages.

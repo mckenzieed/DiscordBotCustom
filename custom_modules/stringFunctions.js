@@ -1,3 +1,5 @@
+var SpecObject = require('../lib/objects/SpecObject');
+
 var prettify = function (stringToPrettify) {
     stringToPrettify = stringToPrettify.charAt(0).toUpperCase() + stringToPrettify.slice(1);
     var index = stringToPrettify.indexOf("-");
@@ -10,4 +12,34 @@ var prettify = function (stringToPrettify) {
     return stringToPrettify;
 }
 
-module.exports = prettify;
+var getSpecObjects = function (stringToParse) {
+    var specObjects = [];
+    while (stringToParse !== "") {
+        var posOfSpec = stringToParse.indexOf("@") + 1;
+        var posOfParse = stringToParse.indexOf("?") + 1;
+        var spec = stringToParse.substring(posOfSpec, posOfParse-1);
+        var nextSpec = stringToParse.indexOf("@", posOfSpec);
+        posOfSpec = stringToParse.indexOf("@", posOfSpec) + 1;
+
+        var parse = "";
+        if (posOfSpec === 0) {
+            parse = stringToParse.substr(posOfParse);
+        } else {
+            parse = stringToParse.substring(posOfParse, posOfSpec-1);
+        }
+
+        var specObject = new SpecObject(spec, parse);
+        specObjects.push(specObject);
+
+        if (posOfSpec === 0) break;
+
+        stringToParse = stringToParse.substr(posOfSpec-1);
+    }
+
+    return specObjects;
+}
+
+module.exports = { 
+    prettify: prettify,
+    getSpecObjects: getSpecObjects
+}

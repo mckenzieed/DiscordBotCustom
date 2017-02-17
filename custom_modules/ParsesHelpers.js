@@ -4,9 +4,10 @@ function ParsesHelpers(parseObject) {
     this.allParses = parseObject;
 }
 
-ParsesHelpers.prototype.getAllParsesOfBoss = function (bossName) {
+ParsesHelpers.prototype.getAllParsesOfBoss = function (boss) {
     var allParses = this.allParses;
     var retList = [];
+    var bossName = boss.getNameWithoutHyphen();
 
     for(var i = 0; i < allParses.length; i++) {
         if (allParses[i].name.toUpperCase() === bossName.toUpperCase()) {
@@ -16,9 +17,10 @@ ParsesHelpers.prototype.getAllParsesOfBoss = function (bossName) {
     return retList;
 }
 
-ParsesHelpers.prototype.getParsesOfBossInDifficulty = function (bossName, difficulty) {
+ParsesHelpers.prototype.getParsesOfBossInDifficulty = function (boss) {
     var allParses = this.allParses;
-
+    var bossName = boss.getNameWithoutHyphen();
+    var difficulty = boss.getDifficulty();
     for(var i = 0; i < allParses.length; i++) {
         if (allParses[i].name.toUpperCase() === bossName.toUpperCase() 
             && allParses[i].difficulty == difficulty) {
@@ -28,9 +30,9 @@ ParsesHelpers.prototype.getParsesOfBossInDifficulty = function (bossName, diffic
     return null;
 }
 
-ParsesHelpers.prototype.getMostRecentBossParse = function (bossName, difficulty) {
+ParsesHelpers.prototype.getMostRecentBossParse = function (boss) {
     var parse = [];
-    var bossParse = this.getParsesOfBossInDifficulty(bossName, difficulty);
+    var bossParse = this.getParsesOfBossInDifficulty(boss);
     if (!bossParse) {
         return parse;
     }

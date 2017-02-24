@@ -14,10 +14,10 @@ module.exports = {
   // Then create a new application and grab your token.
 
   // production
-  //token: "MjgxNDQzMDE2NDM3Mzk5NTUy.C4YBvw.JOKZgcPMUqbNxOfz_s1OeUdibjM",
+  token: "MjgxNDQzMDE2NDM3Mzk5NTUy.C4YBvw.JOKZgcPMUqbNxOfz_s1OeUdibjM",
 
   // dev
-  token: "MjgwODMzOTg3NDU3NTgxMDU2.C4ppyQ.QfSnHj9pDBznPZ7lwfj_OY6J2jA",
+  // token: "MjgwODMzOTg3NDU3NTgxMDU2.C4ppyQ.QfSnHj9pDBznPZ7lwfj_OY6J2jA",
 
   // WarcraftLogs apikey
   wclToken: "b8f97aebad5c6f63f8088de2086e3674",

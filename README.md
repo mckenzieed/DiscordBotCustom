@@ -2,7 +2,7 @@
 > 
 
 ## Version
-1.2.0
+1.4.0
 
 Most recent Update: Added in !parses (characterName) (bossName) (difficulty) [serverName] [serverRegion]. Tells you the dps and hps (if healing) for your most recent kill
 of your boss argument. It also tells you how well you did versus others in your bracket.
@@ -28,8 +28,9 @@ List of commands:
 
 | Command Name  | Arguments | Usage |
 | ------------- | ------------| ----- | 
-| Rank          | Guildname, Realm, Region | Returns realm rank for specified guild. In order, Guildname is default 'Months Behind', Realm is 'Proudmoore' and Region is 'US' |
+| Rank          | [Guildname], [Realm], [Region] | Returns realm rank for specified guild. In order, Guildname is default 'Months Behind', Realm is 'Proudmoore' and Region is 'US' |
 | parses        | (characterName) (bossName) (difficulty) [serverName] [serverRegion] | Get DPS, HPS, and parse of most recent boss kill |
+| getLogs       | [guildName] [serverName] [serverRegion] | Get most recent logs for guild argument |
 | More to come  | | |
 
 ## License

@@ -2,10 +2,9 @@
 > 
 
 ## Version
-1.2.0
+1.4.0
 
-Most recent Update: Added in !parses (characterName) (bossName) (difficulty) [serverName] [serverRegion]. Tells you the dps and hps (if healing) for your most recent kill
-of your boss argument. It also tells you how well you did versus others in your bracket.
+Most recent Update: Added in !getLogs [guildName] [serverName] [serverRegion]. This just returns the most recent log report uploaded to https://warcraftlogs.com/ by the guild argument.
 
 ## Overview
 This is a [Discord](https://discordapp.com/) bot that will do a few things. The main thing it will do is fetch your guilds rank from wowprogress.com.
@@ -28,8 +27,9 @@ List of commands:
 
 | Command Name  | Arguments | Usage |
 | ------------- | ------------| ----- | 
-| Rank          | Guildname, Realm, Region | Returns realm rank for specified guild. In order, Guildname is default 'Months Behind', Realm is 'Proudmoore' and Region is 'US' |
+| Rank          | [Guildname], [Realm], [Region] | Returns realm rank for specified guild. In order, Guildname is default 'Months Behind', Realm is 'Proudmoore' and Region is 'US' |
 | parses        | (characterName) (bossName) (difficulty) [serverName] [serverRegion] | Get DPS, HPS, and parse of most recent boss kill |
+| getLogs       | [guildName] [serverName] [serverRegion] | Get most recent logs for guild argument |
 | More to come  | | |
 
 ## License

@@ -2,12 +2,13 @@
 > 
 
 ## Version
-0.0.2
+1.2.0
 
-First push on 02/14/2017. The bot works with the command !rank, that only gets the rank for the guild 'Months Behind' on US-Proudmoore. Functionality for all other guilds/realms/regions is underway.
+Most recent Update: Added in !parses (characterName) (bossName) (difficulty) [serverName] [serverRegion]. Tells you the dps and hps (if healing) for your most recent kill
+of your boss argument. It also tells you how well you did versus others in your bracket.
 
 ## Overview
-This is a [Discord](https://discordapp.com/) that will do a few things. The main thing it will do is fetch your guilds rank from wowprogress.com.
+This is a [Discord](https://discordapp.com/) bot that will do a few things. The main thing it will do is fetch your guilds rank from wowprogress.com.
 
 ## Installation
 
@@ -28,6 +29,7 @@ List of commands:
 | Command Name  | Arguments | Usage |
 | ------------- | ------------| ----- | 
 | Rank          | Guildname, Realm, Region | Returns realm rank for specified guild. In order, Guildname is default 'Months Behind', Realm is 'Proudmoore' and Region is 'US' |
+| parses        | (characterName) (bossName) (difficulty) [serverName] [serverRegion] | Get DPS, HPS, and parse of most recent boss kill |
 | More to come  | | |
 
 ## License

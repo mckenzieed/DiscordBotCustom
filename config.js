@@ -22,6 +22,9 @@ module.exports = {
   // WarcraftLogs apikey
   wclToken: "b8f97aebad5c6f63f8088de2086e3674",
 
+  //WoW Api key
+  wowToken: "yudh7f6baquxxngknp9zq7uxwy7u9x5s",
+
   // If this option is enabled, the bot will delete the message that triggered it, and its own
   // response, after the specified amount of time has passed.
   // Enable this if you don't want your channel to be flooded with bot messages.
